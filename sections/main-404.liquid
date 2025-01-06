@@ -21,3 +21,46 @@
     {{ 'general.continue_shopping' | t }}
   </a>
 </div>
+<div class="custom-404">
+    <h1>Oops! Page Not Found</h1>
+    <p>We couldn't find the page you were looking for. But don't worry, there's plenty more to explore!</p>
+    
+    <!-- Search bar -->
+    <form action="/search" method="get" class="search-form">
+        <input type="text" name="q" placeholder="Search our store..." />
+        <button type="submit">Search</button>
+    </form>
+    
+    <!-- Links to key pages -->
+    <div class="links">
+        <a href="{{ shop.url }}">Go to Homepage</a>
+        <a href="/collections">Browse Collections</a>
+        <a href="/contact">Contact Us</a>
+    </div>
+</div>
+
+<style>
+    .custom-404 {
+        text-align: center;
+        margin: 50px auto;
+        font-family: Arial, sans-serif;
+    }
+    .search-form input {
+        padding: 10px;
+        width: 60%;
+        max-width: 400px;
+        margin-right: 10px;
+    }
+    .search-form button {
+        padding: 10px 20px;
+    }
+    .links a {
+        display: block;
+        margin: 10px 0;
+        text-decoration: none;
+        color: #007bff;
+    }
+    .links a:hover {
+        text-decoration: underline;
+    }
+</style>
